@@ -27,6 +27,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "outputPath": "dist/angular-21-boilerplate",
+            "index": "src/index.html",
+            "polyfills": ["zone.js"],
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
@@ -65,7 +68,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular/build:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "angular-21-boilerplate:build:production"
