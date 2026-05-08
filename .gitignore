@@ -27,18 +27,23 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/mcp.json
+/.vscode
 .history/*
 
 # Miscellaneous
 .angular/
 /.angular/cache
 .sass-cache/
+/.gemini
+/.github
 /connect.lock
 /coverage
 /libpeerconnection.log
 testem.log
 /typings
+/angular-21-auth-boilerplate.md
 /.agents
+
 __screenshots__/
 
 # System files
