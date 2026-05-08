@@ -43,9 +43,13 @@ testem.log
 /typings
 /angular-21-auth-boilerplate.md
 /.agents
+/backend_update_announce.md
+/frontend_update_announce.md
+/Building_a_NodeJS_TypeScript_MySQL_Boilerplate_API.md
 
 __screenshots__/
 
 # System files
 .DS_Store
 Thumbs.db
+
