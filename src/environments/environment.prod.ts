@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://your-backend-name.onrender.com'
+    apiUrl: 'https://ipt-2026-backend-estrera.onrender.com'
 };
