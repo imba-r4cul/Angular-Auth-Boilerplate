@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { environment } from '@environments/environment';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
@@ -31,7 +32,13 @@ import { HomeComponent } from './home';
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        fakeBackendProvider
+        // fakeBackendProvider
+
+        // Only use fake backend if NOT in production
+        ...(environment.production ? [] : [fakeBackendProvider])
+        
+        // Use this for local development with mysql backend
+        // ...([])
     ],
     bootstrap: [AppComponent]
 })
