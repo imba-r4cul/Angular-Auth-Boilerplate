@@ -1,4 +1,4 @@
-import { expressjwt as jwt } from 'express-jwt';
+import jwt from 'express-jwt';
 import fs from 'fs';
 import path from 'path';
 import db from '../_helpers/db';
@@ -17,7 +17,7 @@ export default function authorize(roles: any = []) {
     return [
         jwt({ secret, algorithms: ['HS256'] }),
         async (req: any, res: any, next: any) => {
-            const account = await db.Account.findByPk(req.auth.sub);
+            const account = await db.Account.findByPk(req.user.sub);
 
             if (!account || (roles.length && !roles.includes(account.role))) {
                 return res.status(401).json({ message: 'Unauthorized' });
