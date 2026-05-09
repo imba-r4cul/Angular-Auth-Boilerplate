@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://ipt-2026-backend-estrera.onrender.com'
-};
+    apiUrl: 'https://your-backend-name.vercel.app' 
+};      
