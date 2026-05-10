@@ -35,7 +35,18 @@ async function initialize() {
         port, 
         dialect: 'mysql',
         dialectModule: require('mysql2'),
-        dialectOptions: ssl ? { ssl: { rejectUnauthorized: false } } : undefined
+        dialectOptions: ssl ? { 
+            ssl: { rejectUnauthorized: false },
+            connectTimeout: 60000 // 60 seconds timeout
+        } : {
+            connectTimeout: 60000 
+        },
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 60000,
+            idle: 10000
+        }
     });
 
     // Init models and attach to db object
