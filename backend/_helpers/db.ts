@@ -34,6 +34,7 @@ async function initialize() {
         host, 
         port, 
         dialect: 'mysql',
+        dialectModule: require('mysql2'),
         dialectOptions: ssl ? { ssl: { rejectUnauthorized: false } } : undefined
     });
 
