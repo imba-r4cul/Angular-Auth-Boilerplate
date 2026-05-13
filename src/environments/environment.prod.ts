@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://ipt-2026-backend-estrera.vercel.app' 
+    apiUrl: 'https://node-mysql-api-umber.vercel.app' 
 };
